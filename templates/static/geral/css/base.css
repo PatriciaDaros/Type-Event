@@ -1,0 +1,18 @@
+* body{
+    {% comment %} color: white !important; {% endcomment %}
+    color: white;
+}
+
+:root{
+     
+    --main-color: #201F1F;
+    --dark-color: #1C1A1A;
+    --contrast-color: #BE375F;
+    --differential-color: #ED8554;
+
+}
+
+.display {
+    background-color: #222;
+    overflow: hidden;
+}

@@ -1,0 +1,50 @@
+{% extends "bases/base_evento.html" %}
+{% load static %}
+
+{% block 'importacoes' %}
+    <link href="{% static 'eventos/css/gerenciar_evento.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block 'conteudo' %}
+    <div class="container">
+        <br>
+        <div class="row">
+            <div class="col-md">
+                <form action="{% url 'gerenciar_evento' %}" method="GET">
+                <label class = "text-white" >Título: </label>
+                <input type="text" placeholder="Título..." class="form-control " name="nome">
+            </div>
+
+            <div class="col-md">
+                <br>
+                <input type="submit" class="btn-primary" value="filtrar">
+                </form>
+            </div>
+
+        </div>
+        <table>
+            <tr>
+                <th class = "text-white" >Logo</th>
+                <th class = "text-white" >Título</th>
+                <th class = "text-white" >Descrição</th>
+                <th class = "text-white" >Início</th>
+                <th class = "text-white" >Término</th>
+                <th class = "text-white" > Link de inscrição</th>
+            </tr>
+            
+            {% for evento in eventos %}
+                <tr class="{% cycle 'linha' 'linha2' %}">
+                    <td width="20%"><a href= "{% url 'participantes_evento' evento.id %}"><img width="100%" src="/media/{{evento.logo}}"></a></td>
+                    <td class = "text-white" >{{evento.nome}}</td>
+                    <td class = "text-white" >{{evento.descricao}}</td>
+                    <td class = "text-white" >{{evento.data_inicio}}</td>
+                    <td class = "text-white" >{{evento.data_termino}}</td>
+                    <td class = "text-white" > http://127.0.0.1:8000/eventos/inscrever_evento/{{evento.id}}/ </td>
+                </tr>
+            {% endfor %}
+                
+        </table>
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends "bases/base_evento.html" %}
+{% load static %}
+
+{% block 'importacoes' %}
+    <link href="{% static 'evento/css/gerenciar_evento.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block 'conteudo' %}
+    <div class="container">
+        <br>
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert {{ message.tags }}">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+        <br>
+        <div class="row">
+            <div class="col-md-2">
+                <img width="100%" src="/media/{{evento.logo}}">
+                <br>
+                <br>
+                <h3 class = "text-white" >{{evento.nome}}</h3>
+                
+            </div>
+            
+            <div class="col-md">
+                <div class="row">
+                    <div class="col-md-2">
+                        <span class="btn btn-outline-success"><a class="link" href="{% url 'participantes_evento' evento.id %}">Participantes</a></span>
+                    </div>
+
+                    <div class="col-md-2">
+                        <span class="btn btn-outline-success"><a class="link" href="{% url 'certificados_evento' evento.id %}">Certificados</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row">
+            <h5 class = "text-white"  >{{evento.participantes.all.count}} Participantes</h5>
+            
+            <div class="col-md-5">
+                <table class="table">
+                    <tr>
+                        <th class = "text-white" >Nome</th>
+                        <th class = "text-white" >E-mail</th>
+                    </tr>
+                    {% for participante in participantes %}
+                        <tr>
+                            <td class = "text-white" >{{participante.username}}</td>
+                            <td class = "text-white" >{{participante.email}}</td>
+                        </tr>
+                    {% endfor %}       
+                </table>
+                <br>
+                <div class="row">
+
+                    <div class="col-md ">
+                        <a href="{% url 'gerar_csv' evento.id %}" class="btn btn-outline-success " style="text-decoration: none;">Exportar CSV</a>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+        
+        
+    </div>
+
+{% endblock %}

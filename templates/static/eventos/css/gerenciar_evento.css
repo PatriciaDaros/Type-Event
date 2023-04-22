@@ -1,0 +1,21 @@
+* body {
+    color: #fff;
+}
+
+table{
+    width: 100%;
+    color: #fff;
+    padding: 20px;
+}
+
+.linha{
+    height: 40px;
+    padding: 20px;
+    color: #fff;
+}
+
+
+td, th{
+    padding: 20px;
+    color: #fff;
+}

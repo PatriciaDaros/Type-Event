@@ -1,0 +1,36 @@
+.coluna {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75vw;
+    height: 90vh;
+    margin: auto;
+    flex-direction: colunm;
+    border: 30px;
+}
+
+.interna {
+    width: 80vw;
+    border-right: 50px;
+    flex: 1;
+}
+
+.botao {
+    flex: 1;
+}
+
+.img{
+    background-image: url('/static/usuarios/img/ladingImg.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-color: #222;    
+}
+
+.btn {
+    justify: center;
+    align: center;
+}
+
+a {
+    color: #222;
+}

@@ -1,0 +1,44 @@
+{% extends 'bases/base.html' %}
+{% load static %}
+{% block 'head' %}
+    <link href="{% static 'usuarios/css/usuarios.css' %}" rel="stylesheet">
+    <link href="{% static 'usuarios/css/index.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block 'body' %}
+
+    <div class="container-fluid bg-inscricao">
+        <div class="row">
+            <div class="col-md">
+                <div class = "coluna">
+
+                    <div class = "interna">
+                        <h3 class = "text-center">Type Event</h3>
+                        Seja bem vindo! Este é o lugar perfeito para quem quer organizar um evento. Possibilitando formas fáceis
+                        de comunicação com os alunos, divulgação de eventos e geraão de certificados.
+                        
+                        <br>
+                        <br>
+
+                        <div class="text-center">
+                            <a href="{% url 'login' %}" class="btn btn-dark">Acessar minha conta</a>
+                        </div>
+
+                        <br>
+
+                        <div class="text-center">
+                            <a href="{% url 'cadastro' %}" >Cadastrar</a>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md img">
+                
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
