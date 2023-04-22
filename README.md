@@ -41,7 +41,7 @@
 <a href="#"><img src="img/sobreEvento.png" alt="Sobre o evento"></a>
 
 ## Certificados
-<a href="#"><img src="img/certificados.png" alt="Certificados"></a>
+<a href="#"><img src="img/Certificados.png" alt="Certificados"></a>
 
 
 <!-- ============== LICENSE ============== -->
