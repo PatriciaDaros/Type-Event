@@ -53,6 +53,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- ============== AUTHOR ============== -->
 ## Author
 
-[<img alt="PatriciaRegina" src="https://github.com/PatriciaDaros.png?size=300" width="115"><br><sub>@PatriciaDaros</sub>](https://github.com/PatriciaDaros)
+[<img align="center" alt="PatriciaRegina" src="https://github.com/PatriciaDaros.png?size=300" width="115"><br><sub>@PatriciaDaros</sub>](https://github.com/PatriciaDaros)
 
 <p align="center">(<a href="#header">back to top</a>)</p>
