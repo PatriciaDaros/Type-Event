@@ -11,7 +11,7 @@
 <div align="center">
   Projeto de gerenciamento de eventos com funcionalidades responsáveis pelo cadastro de eventos, inscrição, login, cadastro de usuários, visualização de seus próprios eventos, geração de certificados, exportar para planilha excel.
   
-  As imagens utilizadas foram retiradas do site: http://www.freepik.com/terms_of_use
+  As imagens utilizadas foram retiradas do site: http://www.freepik.com
 </div>
 
 
